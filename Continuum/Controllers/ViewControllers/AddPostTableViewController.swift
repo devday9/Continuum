@@ -11,21 +11,26 @@ import UIKit
 class AddPostTableViewController: UITableViewController {
     
     //MARK: - Outlets
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var selectPhotoButton: UIButton!
     @IBOutlet weak var captionTextField: UITextField!
+    
+    var selectedImage: UIImage?
     
     //MARK: - Lifecycle
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        photoImageView.image = nil
         captionTextField.text = nil
-        selectPhotoButton.setTitle("Select Photo", for: .normal)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toImagePicController" {
+            guard let selectImageVC = segue.destination as? PhotoSelectorViewController else {return}
+            selectImageVC.delegate = self
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func addPostButtonTapped(_ sender: Any) {
-        guard let photo = photoImageView.image,
+        guard let photo = selectedImage,
               let caption = captionTextField.text else {return}
         PostController.shared.creatPostWith(photo: photo, caption: caption) { (post) in
         }
@@ -36,3 +41,10 @@ class AddPostTableViewController: UITableViewController {
         self.tabBarController?.selectedIndex = 0
     }
 }//END OF CLASS
+
+//MARK: - Extension
+extension AddPostTableViewController: PhotoSelectorViewControllerDelegate {
+    func didSelectImage(image: UIImage) {
+        selectedImage = image
+    }
+}//END OF EXTENSION

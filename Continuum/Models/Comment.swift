@@ -19,3 +19,9 @@ class Comment {
         self.timeStamp = timeStamp
     }
 }//END OF CLASS
+
+extension Comment: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        return text.lowercased().contains(searchTerm.lowercased())
+    }
+}//END OF EXTENSION

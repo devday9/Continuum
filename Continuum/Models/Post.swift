@@ -30,3 +30,9 @@ class Post {
          self.photo = photo
          }
 }//END OF CLASS
+
+extension Post: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        return caption.lowercased().contains(searchTerm.lowercased())
+    }
+}

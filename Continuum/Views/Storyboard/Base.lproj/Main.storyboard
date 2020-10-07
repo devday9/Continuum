@@ -10,7 +10,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="hhG-Cj-hXU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ea4-0S-qCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="X7o-mj-Wg7" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="86N-zp-YoI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -22,6 +21,7 @@
                         <segue destination="cpX-Pm-Ezq" kind="relationship" relationship="viewControllers" id="Qti-yP-lir"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ea4-0S-qCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-812" y="-119"/>
         </scene>
@@ -43,30 +43,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64K-6z-r1v">
-                                                    <rect key="frame" x="20" y="11" width="374" height="284"/>
-                                                    <state key="normal" title="Select an image"/>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRG-Pf-g23">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                                     <connections>
-                                                        <action selector="selectPhotoButton:" destination="3Dp-hm-e9h" eventType="touchUpInside" id="5Yg-7Z-TC5"/>
+                                                        <segue destination="3sQ-DZ-tkt" kind="embed" identifier="toImagePicController" id="BkB-3g-bEd"/>
                                                     </connections>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wxc-OC-gHI">
-                                                    <rect key="frame" x="87" y="33" width="240" height="240"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="22W-W0-zPS"/>
-                                                        <constraint firstAttribute="width" secondItem="Wxc-OC-gHI" secondAttribute="height" multiplier="1:1" id="oIY-iz-Fgc"/>
-                                                    </constraints>
-                                                </imageView>
+                                                </containerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="64K-6z-r1v" firstAttribute="leading" secondItem="V2N-sk-C8h" secondAttribute="leadingMargin" id="4AQ-G4-LDi"/>
-                                                <constraint firstItem="64K-6z-r1v" firstAttribute="top" secondItem="V2N-sk-C8h" secondAttribute="topMargin" id="9ot-vT-3kL"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="64K-6z-r1v" secondAttribute="trailing" id="IaM-DR-Jp6"/>
-                                                <constraint firstItem="Wxc-OC-gHI" firstAttribute="centerY" secondItem="V2N-sk-C8h" secondAttribute="centerY" id="QSM-Gk-sZP"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="64K-6z-r1v" secondAttribute="bottom" id="UoO-IV-DmY"/>
-                                                <constraint firstItem="Wxc-OC-gHI" firstAttribute="centerY" secondItem="64K-6z-r1v" secondAttribute="centerY" id="hE1-xm-xtt"/>
-                                                <constraint firstItem="Wxc-OC-gHI" firstAttribute="centerX" secondItem="64K-6z-r1v" secondAttribute="centerX" id="m80-PX-PQ2"/>
-                                                <constraint firstItem="Wxc-OC-gHI" firstAttribute="centerX" secondItem="V2N-sk-C8h" secondAttribute="centerX" id="mFs-lM-P5D"/>
+                                                <constraint firstAttribute="trailing" secondItem="mRG-Pf-g23" secondAttribute="trailing" id="EIs-Y9-ChA"/>
+                                                <constraint firstItem="mRG-Pf-g23" firstAttribute="leading" secondItem="V2N-sk-C8h" secondAttribute="leading" id="W4L-T2-SyG"/>
+                                                <constraint firstAttribute="bottom" secondItem="mRG-Pf-g23" secondAttribute="bottom" id="lea-VB-3Nm"/>
+                                                <constraint firstItem="mRG-Pf-g23" firstAttribute="top" secondItem="V2N-sk-C8h" secondAttribute="top" id="nKZ-jB-aDz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -141,8 +129,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="captionTextField" destination="JKo-oU-M0n" id="eSc-6c-nMP"/>
-                        <outlet property="photoImageView" destination="Wxc-OC-gHI" id="ik6-1i-NqK"/>
-                        <outlet property="selectPhotoButton" destination="64K-6z-r1v" id="Uch-4n-pyK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rg6-Gz-9KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,9 +143,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Posts..." id="6lu-Ln-SdE">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="458" id="u0p-uO-to0" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="458"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u0p-uO-to0" id="NNP-1N-Pac">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
@@ -211,6 +202,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="kbg-n2-WD8"/>
+                    <connections>
+                        <outlet property="postSearchBar" destination="6lu-Ln-SdE" id="Ydr-HX-Z9g"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbM-gJ-iQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +268,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="hCF-sd-zuN" detailTextLabel="a06-Cb-QQ0" style="IBUITableViewCellStyleSubtitle" id="yM0-jv-c98">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="hCF-sd-zuN" detailTextLabel="a06-Cb-QQ0" style="IBUITableViewCellStyleSubtitle" id="yM0-jv-c98">
                                 <rect key="frame" x="0.0" y="381" width="414" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yM0-jv-c98" id="prb-XI-I8k">
@@ -350,6 +344,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsX-oV-Lug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-34.399999999999999" y="363.86806596701655"/>
+        </scene>
+        <!--Photo Selector View Controller-->
+        <scene sceneID="hGh-fw-EZq">
+            <objects>
+                <viewController id="3sQ-DZ-tkt" customClass="PhotoSelectorViewController" customModule="Continuum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gU-VV-QwF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-9U-svX">
+                                <rect key="frame" x="62" y="8" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JbE-9U-svX" secondAttribute="height" multiplier="1:1" id="ZF6-5H-PLQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzU-hM-dTB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhotoButtonTapped:" destination="3sQ-DZ-tkt" eventType="touchUpInside" id="wmf-yz-QIi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="CzU-hM-dTB" secondAttribute="bottom" id="19L-dz-ePU"/>
+                            <constraint firstItem="JbE-9U-svX" firstAttribute="centerY" secondItem="2gU-VV-QwF" secondAttribute="centerY" id="5xh-VA-u0V"/>
+                            <constraint firstItem="CzU-hM-dTB" firstAttribute="leading" secondItem="2gU-VV-QwF" secondAttribute="leading" id="AAl-UV-0Dz"/>
+                            <constraint firstItem="JbE-9U-svX" firstAttribute="centerX" secondItem="2gU-VV-QwF" secondAttribute="centerX" id="HUy-PZ-68J"/>
+                            <constraint firstAttribute="bottom" secondItem="CzU-hM-dTB" secondAttribute="bottom" id="MBN-xW-E5J"/>
+                            <constraint firstItem="JbE-9U-svX" firstAttribute="width" secondItem="2gU-VV-QwF" secondAttribute="width" multiplier="0.700483" id="U8L-Ii-lbn"/>
+                            <constraint firstItem="CzU-hM-dTB" firstAttribute="top" secondItem="2gU-VV-QwF" secondAttribute="top" id="ehx-cH-hfY"/>
+                            <constraint firstAttribute="trailing" secondItem="CzU-hM-dTB" secondAttribute="trailing" id="iGu-gV-3FT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postImageView" destination="JbE-9U-svX" id="tAN-4M-rGj"/>
+                        <outlet property="selectPhotoButton" destination="CzU-hM-dTB" id="PZP-pI-zxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Omi-LA-F6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="27"/>
         </scene>
     </scenes>
     <resources>
