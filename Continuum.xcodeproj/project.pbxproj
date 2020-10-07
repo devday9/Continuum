@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C39369DD252D0A5300CCB1C1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39369DC252D0A5300CCB1C1 /* CloudKit.framework */; };
+		C39369EB252D0CC300CCB1C1 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369EA252D0CC300CCB1C1 /* PostListTableViewController.swift */; };
+		C39369EE252D0D4F00CCB1C1 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369ED252D0D4F00CCB1C1 /* PostDetailTableViewController.swift */; };
+		C39369F1252D0DFF00CCB1C1 /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369F0252D0DFF00CCB1C1 /* AddPostTableViewController.swift */; };
+		C39369F4252D0E6500CCB1C1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369F3252D0E6500CCB1C1 /* Post.swift */; };
+		C39369F9252D103900CCB1C1 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369F8252D103900CCB1C1 /* PostController.swift */; };
+		C39369FD252D13BB00CCB1C1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39369FC252D13BB00CCB1C1 /* Comment.swift */; };
+		C3936A02252D14EA00CCB1C1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3936A01252D14EA00CCB1C1 /* PostTableViewCell.swift */; };
+		C3936A08252D251000CCB1C1 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3936A07252D251000CCB1C1 /* PostError.swift */; };
 		F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F99C382211F96400D13C4C /* AppDelegate.swift */; };
 		F7F99C3E2211F96400D13C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3C2211F96400D13C4C /* Main.storyboard */; };
 		F7F99C402211F96600D13C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3F2211F96600D13C4C /* Assets.xcassets */; };
@@ -14,6 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C39369DA252D0A5100CCB1C1 /* Continuum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Continuum.entitlements; sourceTree = "<group>"; };
+		C39369DC252D0A5300CCB1C1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C39369EA252D0CC300CCB1C1 /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		C39369ED252D0D4F00CCB1C1 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		C39369F0252D0DFF00CCB1C1 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
+		C39369F3252D0E6500CCB1C1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C39369F8252D103900CCB1C1 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		C39369FC252D13BB00CCB1C1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C3936A01252D14EA00CCB1C1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		C3936A07252D251000CCB1C1 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		F7F99C352211F96400D13C4C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F99C382211F96400D13C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F99C3D2211F96400D13C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,17 +46,107 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39369DD252D0A5300CCB1C1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C39369D9252D0A1700CCB1C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7F99C382211F96400D13C4C /* AppDelegate.swift */,
+				F7F99C3F2211F96600D13C4C /* Assets.xcassets */,
+				F7F99C412211F96600D13C4C /* LaunchScreen.storyboard */,
+				F7F99C442211F96600D13C4C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C39369DB252D0A5300CCB1C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39369DC252D0A5300CCB1C1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39369E1252D0A8F00CCB1C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C39369E3252D0AA500CCB1C1 /* CustomViews */,
+				C39369E2252D0A9B00CCB1C1 /* Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C39369E2252D0A9B00CCB1C1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F7F99C3C2211F96400D13C4C /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C39369E3252D0AA500CCB1C1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C3936A01252D14EA00CCB1C1 /* PostTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		C39369E4252D0AAE00CCB1C1 /* Helper+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3936A07252D251000CCB1C1 /* PostError.swift */,
+			);
+			path = "Helper+Extensions";
+			sourceTree = "<group>";
+		};
+		C39369E5252D0AC400CCB1C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C39369E7252D0AD900CCB1C1 /* ModelControllers */,
+				C39369E6252D0ACE00CCB1C1 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C39369E6252D0ACE00CCB1C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C39369EA252D0CC300CCB1C1 /* PostListTableViewController.swift */,
+				C39369ED252D0D4F00CCB1C1 /* PostDetailTableViewController.swift */,
+				C39369F0252D0DFF00CCB1C1 /* AddPostTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C39369E7252D0AD900CCB1C1 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C39369F8252D103900CCB1C1 /* PostController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		C39369E8252D0AE000CCB1C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C39369F3252D0E6500CCB1C1 /* Post.swift */,
+				C39369FC252D13BB00CCB1C1 /* Comment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F7F99C2C2211F96400D13C4C = {
 			isa = PBXGroup;
 			children = (
 				F7F99C372211F96400D13C4C /* Continuum */,
 				F7F99C362211F96400D13C4C /* Products */,
+				C39369DB252D0A5300CCB1C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +161,12 @@
 		F7F99C372211F96400D13C4C /* Continuum */ = {
 			isa = PBXGroup;
 			children = (
-				F7F99C382211F96400D13C4C /* AppDelegate.swift */,
-				F7F99C3C2211F96400D13C4C /* Main.storyboard */,
-				F7F99C3F2211F96600D13C4C /* Assets.xcassets */,
-				F7F99C412211F96600D13C4C /* LaunchScreen.storyboard */,
-				F7F99C442211F96600D13C4C /* Info.plist */,
+				C39369E8252D0AE000CCB1C1 /* Models */,
+				C39369E5252D0AC400CCB1C1 /* Controllers */,
+				C39369E1252D0A8F00CCB1C1 /* Views */,
+				C39369DA252D0A5100CCB1C1 /* Continuum.entitlements */,
+				C39369E4252D0AAE00CCB1C1 /* Helper+Extensions */,
+				C39369D9252D0A1700CCB1C1 /* Resources */,
 			);
 			path = Continuum;
 			sourceTree = "<group>";
@@ -133,6 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */,
+				C3936A08252D251000CCB1C1 /* PostError.swift in Sources */,
+				C39369EB252D0CC300CCB1C1 /* PostListTableViewController.swift in Sources */,
+				C39369F1252D0DFF00CCB1C1 /* AddPostTableViewController.swift in Sources */,
+				C3936A02252D14EA00CCB1C1 /* PostTableViewCell.swift in Sources */,
+				C39369FD252D13BB00CCB1C1 /* Comment.swift in Sources */,
+				C39369EE252D0D4F00CCB1C1 /* PostDetailTableViewController.swift in Sources */,
+				C39369F4252D0E6500CCB1C1 /* Post.swift in Sources */,
+				C39369F9252D103900CCB1C1 /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,14 +396,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Continuum/Continuum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77U2457882;
-				INFOPLIST_FILE = Continuum/Info.plist;
+				DEVELOPMENT_TEAM = NZ84G65WL7;
+				INFOPLIST_FILE = Continuum/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Continuum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DevenDay.dvmtn.ContinuumHW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,14 +416,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Continuum/Continuum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77U2457882;
-				INFOPLIST_FILE = Continuum/Info.plist;
+				DEVELOPMENT_TEAM = NZ84G65WL7;
+				INFOPLIST_FILE = Continuum/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Continuum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DevenDay.dvmtn.ContinuumHW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
