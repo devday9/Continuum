@@ -192,7 +192,7 @@
                                     <outlet property="captionLabel" destination="EBJ-No-VIM" id="tvF-x7-oLj"/>
                                     <outlet property="commentLabel" destination="9mq-dK-oqM" id="cBJ-WP-NfQ"/>
                                     <outlet property="postPhotoImageView" destination="HTn-XV-xed" id="ZKZ-1z-L1o"/>
-                                    <segue destination="Utv-dh-mPe" kind="show" id="ELk-k0-aBy"/>
+                                    <segue destination="Utv-dh-mPe" kind="show" identifier="toPostDetailVC" id="ELk-k0-aBy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -268,21 +268,21 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="hCF-sd-zuN" detailTextLabel="a06-Cb-QQ0" style="IBUITableViewCellStyleSubtitle" id="yM0-jv-c98">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="hCF-sd-zuN" detailTextLabel="6YG-I9-gVI" style="IBUITableViewCellStyleSubtitle" id="yM0-jv-c98">
                                 <rect key="frame" x="0.0" y="381" width="414" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yM0-jv-c98" id="prb-XI-I8k">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hCF-sd-zuN">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hCF-sd-zuN">
                                             <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a06-Cb-QQ0">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6YG-I9-gVI">
                                             <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>

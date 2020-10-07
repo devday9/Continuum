@@ -21,6 +21,7 @@ class PostController {
                     completion: (Result<Comment, PostError>) -> Void) {
         let comment = Comment(text: text, post: post)
         post.comments.append(comment)
+        completion(.success(comment))
     }
     
     func creatPostWith(photo: UIImage, caption: String,

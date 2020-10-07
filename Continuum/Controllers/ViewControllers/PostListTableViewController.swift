@@ -14,9 +14,9 @@ class PostListTableViewController: UITableViewController {
     @IBOutlet weak var postSearchBar: UISearchBar!
     
     //MARK: - Propertis
-    var resultsArray: [SearchableRecord] = []
+    var resultsArray: [Post] = []
     var isSearching = false
-    var dataSource: [SearchableRecord] {
+    var dataSource: [Post] {
         return isSearching ? resultsArray : PostController.shared.posts
     }
 
@@ -32,13 +32,17 @@ class PostListTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 450
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? PostTableViewCell else {return UITableViewCell()}
-        let post = dataSource[indexPath.row] as? Post
+        let post = dataSource[indexPath.row]
         cell.post = post
         
         return cell

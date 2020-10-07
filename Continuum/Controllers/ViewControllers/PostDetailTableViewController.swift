@@ -14,21 +14,19 @@ class PostDetailTableViewController: UITableViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     
     //MARK: - Properties
-    var post: Post? {
-        didSet {
-            loadViewIfNeeded()
-            updateViews()
-        }
-    }
+    var post: Post?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
     
     //MARK: - Methods
     func updateViews() {
-        photoImageView.image = post?.photo
+        if let post = post {
+            photoImageView.image = post.photo
+        }
         tableView.reloadData()
     }
     
@@ -73,7 +71,6 @@ class PostDetailTableViewController: UITableViewController {
      let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)
         let comment = post?.comments[indexPath.row]
         cell.textLabel?.text = comment?.text
-//        cell.detailTextLabel?.text = comment?.timeStamp.stringWith(dataStyle: .medium, timeStyle: .short)
      
      return cell
      }
